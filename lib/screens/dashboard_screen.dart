@@ -826,7 +826,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             icon: const Icon(Icons.dashboard_outlined),
             activeIcon: Container(
               decoration: BoxDecoration(
-                color: Colors.blue.withOpacity(0.1),
+                color: Colors.blue.withValues(alpha: 0.1),
                 shape: BoxShape.circle,
               ),
               padding: const EdgeInsets.all(8),
@@ -838,7 +838,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             icon: const Icon(Icons.inventory_2_outlined),
             activeIcon: Container(
               decoration: BoxDecoration(
-                color: Colors.blue.withOpacity(0.1),
+                color: Colors.blue.withValues(alpha: 0.1),
                 shape: BoxShape.circle,
               ),
               padding: const EdgeInsets.all(8),
@@ -850,7 +850,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             icon: const Icon(Icons.work_outline),
             activeIcon: Container(
               decoration: BoxDecoration(
-                color: Colors.blue.withOpacity(0.1),
+                color: Colors.blue.withValues(alpha: 0.1),
                 shape: BoxShape.circle,
               ),
               padding: const EdgeInsets.all(8),
@@ -862,7 +862,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             icon: const Icon(Icons.group_outlined),
             activeIcon: Container(
               decoration: BoxDecoration(
-                color: Colors.blue.withOpacity(0.1),
+                color: Colors.blue.withValues(alpha: 0.1),
                 shape: BoxShape.circle,
               ),
               padding: const EdgeInsets.all(8),
@@ -930,7 +930,7 @@ class _MiniLineChart extends StatelessWidget {
   final List<double>? seriesB;
   final List<int>? points;
 
-  const _MiniLineChart._(this.seriesA, this.seriesB, this.points, {super.key});
+  const _MiniLineChart._(this.seriesA, this.seriesB, this.points);
 
   factory _MiniLineChart.points(List<int> pts) {
     return _MiniLineChart._(pts.map((e) => e.toDouble()).toList(), null, pts);

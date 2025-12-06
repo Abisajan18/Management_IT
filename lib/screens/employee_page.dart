@@ -622,8 +622,11 @@ class _EmployeePageState extends State<EmployeePage> {
     );
 
     if (confirm == true) {
+      if (!mounted) return;
       await EmployeeService.markSalariesPaidNow();
+      if (!mounted) return;
       setState(() {});
+      if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(
